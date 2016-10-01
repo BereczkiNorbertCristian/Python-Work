@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Repository.repostudassign</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="Repository.html"><font color="#ffffff">Repository</font></a>.repostudassign</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cworks%5Clab3%5Crepository%5Crepostudassign.py">c:\works\lab3\repository\repostudassign.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Nov&nbsp;11,&nbsp;2015<br>
+&nbsp;<br>
+@author:&nbsp;Norbi</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Repository.repostudassign.html#StudAssignRepo">StudAssignRepo</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="StudAssignRepo">class <strong>StudAssignRepo</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="StudAssignRepo-RepoRemove"><strong>RepoRemove</strong></a>(self, stud, assign)</dt><dd><tt>removes&nbsp;from&nbsp;repository&nbsp;an&nbsp;association&nbsp;based&nbsp;on&nbsp;student's&nbsp;id&nbsp;and&nbsp;assignment's&nbsp;id<br>
+Returns:</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-__init__"><strong>__init__</strong></a>(self)</dt><dd><tt>constructor&nbsp;for&nbsp;list&nbsp;in&nbsp;repository</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>returns:&nbsp;the&nbsp;length&nbsp;of&nbsp;the&nbsp;list</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-add"><strong>add</strong></a>(self, sa)</dt><dd><tt>adds&nbsp;in&nbsp;the&nbsp;list&nbsp;an&nbsp;<a href="builtins.html#object">object</a>&nbsp;StudAssign<br>
+Args:sa&nbsp;-&nbsp;<a href="builtins.html#object">object</a>&nbsp;type&nbsp;StudAssign<br>
+Exception:raises&nbsp;ObjectException&nbsp;if&nbsp;association&nbsp;like&nbsp;sa&nbsp;already&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-fetch_association"><strong>fetch_association</strong></a>(self, stud, assign)</dt><dd><tt>Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;studId:int&nbsp;-&nbsp;sduent's&nbsp;id&nbsp;in&nbsp;the&nbsp;association<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assignId:&nbsp;int&nbsp;-&nbsp;assignment's&nbsp;id&nbsp;in&nbsp;the&nbsp;association<br>
+&nbsp;<br>
+Returns:</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-get_all"><strong>get_all</strong></a>(self)</dt><dd><tt>returns:&nbsp;the&nbsp;list&nbsp;in&nbsp;repository</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-identical_search"><strong>identical_search</strong></a>(self, sa)</dt><dd><tt>searches&nbsp;for&nbsp;an&nbsp;association&nbsp;equal&nbsp;to&nbsp;sa's&nbsp;student&nbsp;and&nbsp;assignment<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;sa:<a href="builtins.html#object">object</a>&nbsp;type&nbsp;StudAssign<br>
+Returns:True-if&nbsp;an&nbsp;association's&nbsp;student&nbsp;and&nbsp;assignment&nbsp;equals&nbsp;to&nbsp;sa&nbsp;student&nbsp;and&nbsp;assignment<br>
+False-if&nbsp;not&nbsp;even&nbsp;an&nbsp;association's&nbsp;student&nbsp;and&nbsp;assignemnt&nbsp;equal&nbsp;to&nbsp;sa's&nbsp;hasn't&nbsp;been&nbsp;found</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-remove_assign"><strong>remove_assign</strong></a>(self, assign)</dt><dd><tt>Deletes&nbsp;the&nbsp;association&nbsp;StudAssign&nbsp;in&nbsp;which&nbsp;<a href="builtins.html#object">object</a>&nbsp;stud&nbsp;is&nbsp;found<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stud:student&nbsp;to&nbsp;be&nbsp;searched&nbsp;for&nbsp;and&nbsp;the&nbsp;association&nbsp;StudAssign&nbsp;in&nbsp;which&nbsp;it&nbsp;is&nbsp;found&nbsp;will&nbsp;be&nbsp;deleted<br>
+Returns:sa=as&nbsp;<a href="builtins.html#object">object</a>-if&nbsp;an&nbsp;occurence&nbsp;of&nbsp;<a href="builtins.html#object">object</a>&nbsp;stud&nbsp;is&nbsp;found<br>
+sa=False-if&nbsp;not&nbsp;even&nbsp;an&nbsp;occurence&nbsp;of&nbsp;<a href="builtins.html#object">object</a>&nbsp;stud&nbsp;is&nbsp;found</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-remove_by_assign"><strong>remove_by_assign</strong></a>(self, assign)</dt><dd><tt>removes&nbsp;objects&nbsp;from&nbsp;listby&nbsp;assign</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-remove_by_stud"><strong>remove_by_stud</strong></a>(self, stud)</dt><dd><tt>removes&nbsp;objects&nbsp;from&nbsp;listby&nbsp;assign</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-remove_stud"><strong>remove_stud</strong></a>(self, stud)</dt><dd><tt>Deletes&nbsp;the&nbsp;association&nbsp;StudAssign&nbsp;in&nbsp;which&nbsp;<a href="builtins.html#object">object</a>&nbsp;stud&nbsp;is&nbsp;found<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;stud:student&nbsp;to&nbsp;be&nbsp;searched&nbsp;for&nbsp;and&nbsp;the&nbsp;association&nbsp;StudAssign&nbsp;in&nbsp;which&nbsp;it&nbsp;is&nbsp;found&nbsp;will&nbsp;be&nbsp;deleted<br>
+Returns:sa=as&nbsp;<a href="builtins.html#object">object</a>-if&nbsp;an&nbsp;occurence&nbsp;of&nbsp;<a href="builtins.html#object">object</a>&nbsp;stud&nbsp;is&nbsp;found<br>
+sa=False-if&nbsp;not&nbsp;even&nbsp;an&nbsp;occurence&nbsp;of&nbsp;<a href="builtins.html#object">object</a>&nbsp;stud&nbsp;is&nbsp;found</tt></dd></dl>
+
+<dl><dt><a name="StudAssignRepo-search_by_index"><strong>search_by_index</strong></a>(self, assoc)</dt></dl>
+
+<dl><dt><a name="StudAssignRepo-show_stud_assign"><strong>show_stud_assign</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="StudAssignRepo-update"><strong>update</strong></a>(self, assoc, upAssoc)</dt><dd><tt>updated&nbsp;the&nbsp;current&nbsp;association<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assoc:&nbsp;<a href="builtins.html#object">object</a>&nbsp;type&nbsp;StudAssign<br>
+&nbsp;&nbsp;&nbsp;&nbsp;upAssoc:&nbsp;<a href="builtins.html#object">object</a>&nbsp;type&nbsp;StudAssign</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-RepoTest"><strong>RepoTest</strong></a>()</dt></dl>
+</td></tr></table>
+</body></html>

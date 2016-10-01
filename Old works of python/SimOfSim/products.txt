@@ -1,0 +1,5 @@
+nivea,spray,9
+milka,chocolate,33
+dove,soap,17
+heidi,chocolate,44
+lindl,chocolate,3

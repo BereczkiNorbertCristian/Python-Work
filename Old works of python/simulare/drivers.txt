@@ -1,0 +1,10 @@
+1,alex
+2000,ion
+2,pavel
+3,cristi
+4,carlos
+5,vladimir
+6,juan
+7,peter
+20,john
+12,sanders

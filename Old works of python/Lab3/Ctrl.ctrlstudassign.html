@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Ctrl.ctrlstudassign</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="Ctrl.html"><font color="#ffffff">Ctrl</font></a>.ctrlstudassign</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cworks%5Clab3%5Cctrl%5Cctrlstudassign.py">c:\works\lab3\ctrl\ctrlstudassign.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Nov&nbsp;11,&nbsp;2015<br>
+&nbsp;<br>
+@author:&nbsp;Norbi</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Ctrl.ctrlstudassign.html#StudAssignCtrl">StudAssignCtrl</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="StudAssignCtrl">class <strong>StudAssignCtrl</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="StudAssignCtrl-AvgGradeBelow5"><strong>AvgGradeBelow5</strong></a>(self)</dt><dd><tt>Takes&nbsp;the&nbsp;students&nbsp;with&nbsp;the&nbsp;average&nbsp;grade&nbsp;below&nbsp;5<br>
+Returns:a&nbsp;list&nbsp;of&nbsp;students&nbsp;with&nbsp;average&nbsp;grade&nbsp;below&nbsp;5</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-SortAlphabetical"><strong>SortAlphabetical</strong></a>(self, assign)</dt><dd><tt>takes&nbsp;the&nbsp;associations&nbsp;related&nbsp;to&nbsp;an&nbsp;assignment&nbsp;and&nbsp;then&nbsp;sorts&nbsp;them&nbsp;by&nbsp;student's&nbsp;name<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assign:<a href="builtins.html#object">object</a>&nbsp;type&nbsp;Assignment<br>
+&nbsp;<br>
+Returns:list&nbsp;sorted&nbsp;of&nbsp;associations</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-SortByGrade"><strong>SortByGrade</strong></a>(self, assign)</dt><dd><tt>creates&nbsp;a&nbsp;list&nbsp;with&nbsp;associations&nbsp;related&nbsp;to&nbsp;an&nbsp;assignment&nbsp;and&nbsp;sorts&nbsp;it<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assign:<a href="builtins.html#object">object</a>&nbsp;type&nbsp;Assignment<br>
+&nbsp;<br>
+Returns:sorted&nbsp;list&nbsp;of&nbsp;associations&nbsp;by&nbsp;grade</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-__init__"><strong>__init__</strong></a>(self, repoSA, repoS, repoA, undoCtrl)</dt><dd><tt>constructor&nbsp;for&nbsp;controller<br>
+repoSA-repository&nbsp;for&nbsp;associations&nbsp;StudAssign<br>
+repoS-repository&nbsp;for&nbsp;students<br>
+repoA-repository&nbsp;for&nbsp;assginments</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-associate"><strong>associate</strong></a>(self, studId, assignId, d, grade)</dt><dd><tt>adds&nbsp;an&nbsp;association&nbsp;to&nbsp;the&nbsp;repository&nbsp;of&nbsp;associations<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;studId:int-the&nbsp;id&nbsp;of&nbsp;the&nbsp;student&nbsp;which&nbsp;will&nbsp;be&nbsp;associated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assignId:int-the&nbsp;id&nbsp;of&nbsp;the&nbsp;assignment&nbsp;with&nbsp;which&nbsp;the&nbsp;student&nbsp;will&nbsp;be&nbsp;associated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;d:Deadline&nbsp;<a href="builtins.html#object">object</a>-the&nbsp;deadline&nbsp;untill&nbsp;the&nbsp;assignment&nbsp;must&nbsp;be&nbsp;done<br>
+&nbsp;&nbsp;&nbsp;&nbsp;grade:int&nbsp;between&nbsp;1-&gt;10<br>
+&nbsp;<br>
+Returns:</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-avg_stud_grade"><strong>avg_stud_grade</strong></a>(self, studid)</dt><dd><tt>Computes&nbsp;the&nbsp;average&nbsp;grade&nbsp;of&nbsp;a&nbsp;student&nbsp;by&nbsp;searching&nbsp;for&nbsp;associations(where&nbsp;we&nbsp;can&nbsp;find&nbsp;grades)<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;studid:int<br>
+&nbsp;<br>
+Returns:avgGrade&nbsp;of&nbsp;a&nbsp;student</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-fetch_association"><strong>fetch_association</strong></a>(self, studId, assignId)</dt><dd><tt>Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;studId:int&nbsp;student's&nbsp;id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assignId:int&nbsp;assigment's&nbsp;id<br>
+&nbsp;<br>
+Returns:association<br>
+Exception:&nbsp;returns&nbsp;Objectexception&nbsp;with&nbsp;message&nbsp;if&nbsp;association&nbsp;couldn't&nbsp;be&nbsp;fetched</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-fetch_by_assign"><strong>fetch_by_assign</strong></a>(self, assign)</dt><dd><tt>gets&nbsp;the&nbsp;<a href="builtins.html#object">object</a>&nbsp;type&nbsp;studassign&nbsp;from&nbsp;the&nbsp;repository&nbsp;as&nbsp;field&nbsp;assign&nbsp;equals&nbsp;assign</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-fetch_by_stud"><strong>fetch_by_stud</strong></a>(self, stud)</dt><dd><tt>gets&nbsp;the&nbsp;<a href="builtins.html#object">object</a>&nbsp;type&nbsp;studassign&nbsp;from&nbsp;the&nbsp;repository&nbsp;as&nbsp;field&nbsp;stud&nbsp;equals&nbsp;stud</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-quick_remove"><strong>quick_remove</strong></a>(self, studId, assignId)</dt><dd><tt>removes&nbsp;the&nbsp;association&nbsp;with&nbsp;studid&nbsp;and&nbsp;assignid&nbsp;by&nbsp;poping&nbsp;it&nbsp;from&nbsp;the&nbsp;list&nbsp;of&nbsp;associations<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;studId:&nbsp;int&nbsp;representing&nbsp;student's&nbsp;id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assignId:&nbsp;int&nbsp;representing&nbsp;assignment's&nbsp;id<br>
+&nbsp;<br>
+Returns:</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-redo"><strong>redo</strong></a>(self)</dt><dd><tt>Redoes&nbsp;the&nbsp;last&nbsp;undo&nbsp;operation<br>
+Returns:True&nbsp;if&nbsp;operation&nbsp;was&nbsp;redone,False&nbsp;otherwise.</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-remove_association"><strong>remove_association</strong></a>(self)</dt><dd><tt>read's&nbsp;the&nbsp;student's&nbsp;id&nbsp;and&nbsp;assignment's&nbsp;id&nbsp;of&nbsp;the&nbsp;associations&nbsp;to&nbsp;be&nbsp;removed<br>
+then&nbsp;removes&nbsp;is<br>
+and&nbsp;introduces&nbsp;in&nbsp;the&nbsp;undo&nbsp;controller&nbsp;the&nbsp;operation&nbsp;we've&nbsp;done<br>
+Returns:</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-remove_by_assign"><strong>remove_by_assign</strong></a>(self, assign)</dt><dd><tt>removes&nbsp;by&nbsp;assign&nbsp;from&nbsp;repository&nbsp;by&nbsp;a&nbsp;controller</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-remove_by_stud"><strong>remove_by_stud</strong></a>(self, stud)</dt><dd><tt>removes&nbsp;by&nbsp;stud&nbsp;from&nbsp;repository&nbsp;with&nbsp;a&nbsp;controller</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-show_stud_assign"><strong>show_stud_assign</strong></a>(self)</dt><dd><tt>shows&nbsp;the&nbsp;list&nbsp;of&nbsp;associations<br>
+Returns:nothing</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-undo"><strong>undo</strong></a>(self)</dt><dd><tt>Undoes&nbsp;the&nbsp;last&nbsp;studassign&nbsp;operation&nbsp;that&nbsp;changed&nbsp;the&nbsp;set&nbsp;of&nbsp;associations.<br>
+Returns&nbsp;True&nbsp;if&nbsp;operation&nbsp;was&nbsp;undone,&nbsp;False&nbsp;otherwise.</tt></dd></dl>
+
+<dl><dt><a name="StudAssignCtrl-update"><strong>update</strong></a>(self, newAssoc)</dt><dd><tt>Updates&nbsp;the&nbsp;association&nbsp;between&nbsp;a&nbsp;student&nbsp;and&nbsp;an&nbsp;assignment<br>
+Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;assoc:<a href="builtins.html#object">object</a>&nbsp;type&nbsp;StudAssign<br>
+&nbsp;&nbsp;&nbsp;&nbsp;d:&nbsp;<a href="builtins.html#object">object</a>&nbsp;type&nbsp;Deadline<br>
+&nbsp;&nbsp;&nbsp;&nbsp;g:&nbsp;int-the&nbsp;grade<br>
+&nbsp;<br>
+Returns:</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

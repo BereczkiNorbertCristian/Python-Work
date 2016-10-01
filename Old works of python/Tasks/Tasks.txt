@@ -1,0 +1,13 @@
+Go shopping,active
+Go swimming,archived
+Go to grocery,done
+Make a wish,active
+do 6 laps,active
+do homework,done
+walk the dog,archived
+do 6 abs,active
+new math,active
+do something,archived
+make a fountain,active
+dream,done
+sleep,archived
