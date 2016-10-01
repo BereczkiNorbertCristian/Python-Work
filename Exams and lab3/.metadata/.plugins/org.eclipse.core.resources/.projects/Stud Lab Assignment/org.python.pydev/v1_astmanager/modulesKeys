@@ -1,0 +1,20 @@
+MODULES_MANAGER_V2
+Controller.AssignCtrl|C:\works\Stud Lab Assignment\Controller\AssignCtrl.py
+Controller.StudAssignCtrl|C:\works\Stud Lab Assignment\Controller\StudAssignCtrl.py
+Controller.StudCtrl|C:\works\Stud Lab Assignment\Controller\StudCtrl.py
+Controller.__init__|C:\works\Stud Lab Assignment\Controller\__init__.py
+Domain.AssignmentD|C:\works\Stud Lab Assignment\Domain\AssignmentD.py
+Domain.DeadlinesD|C:\works\Stud Lab Assignment\Domain\DeadlinesD.py
+Domain.StudAssign|C:\works\Stud Lab Assignment\Domain\StudAssign.py
+Domain.StudentD|C:\works\Stud Lab Assignment\Domain\StudentD.py
+Domain.__init__|C:\works\Stud Lab Assignment\Domain\__init__.py
+Repository.AssignRepo|C:\works\Stud Lab Assignment\Repository\AssignRepo.py
+Repository.StudAssignRepo|C:\works\Stud Lab Assignment\Repository\StudAssignRepo.py
+Repository.StudRepo|C:\works\Stud Lab Assignment\Repository\StudRepo.py
+Repository.__init__|C:\works\Stud Lab Assignment\Repository\__init__.py
+UI.__init__|C:\works\Stud Lab Assignment\UI\__init__.py
+UI.myUI|C:\works\Stud Lab Assignment\UI\myUI.py
+Validity.ClassValidators|C:\works\Stud Lab Assignment\Validity\ClassValidators.py
+Validity.MyValidFuntions|C:\works\Stud Lab Assignment\Validity\MyValidFuntions.py
+Validity.__init__|C:\works\Stud Lab Assignment\Validity\__init__.py
+rhe|C:\works\Stud Lab Assignment\rhe.py

@@ -1,0 +1,15 @@
+INSTUPDomain.StudAssign
+C:\works\Stud Lab Assignment\Domain\StudAssign.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&3|7|2|5&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&2|12|2|0
+get_deadline=10
+get_stud=8
+test_StudAssign=12
+__eq__=11
+get_assign=9
+StudAssign.__init__=5
+__deadline=7
+Domain.StudAssign=2
+__init__=3
+__stud=4
+StudAssign=1
+__assign=6

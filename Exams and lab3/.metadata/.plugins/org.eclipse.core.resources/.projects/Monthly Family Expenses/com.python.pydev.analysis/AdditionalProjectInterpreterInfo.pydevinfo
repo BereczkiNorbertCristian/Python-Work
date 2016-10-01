@@ -1,0 +1,54 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\works\.metadata\.plugins\org.eclipse.core.resources\.projects\Monthly Family Expenses\com.python.pydev.analysis\v2_indexcache
+characteristics|1446014747960931000|C:\works\Monthly Family Expenses\Sources\characteristics.py
+logics|1446014748086755000|C:\works\Monthly Family Expenses\Sources\logics.py
+valids|1446015476721251000|C:\works\Monthly Family Expenses\Sources\valids.py
+adding|1446014747766960000|C:\works\Monthly Family Expenses\Sources\adding.py
+selectfilter|1446014748188504000|C:\works\Monthly Family Expenses\Sources\selectfilter.py
+Main|1446274845293519000|C:\works\Monthly Family Expenses\Sources\Main.py
+removing|1446014747993166000|C:\works\Monthly Family Expenses\Sources\removing.py
+undoredo|1446016068918862000|C:\works\Monthly Family Expenses\Sources\undoredo.py
+-- END DISKCACHE
+-- START DICTIONARY
+8
+3=valids
+5=logics
+8=characteristics
+1=adding
+6=selectfilter
+2=Main
+4=removing
+7=undoredo
+-- END DICTIONARY
+-- START TREE 1
+25
+add|1|add_expense!10@
+cos|4|cost_in_expense!19@cost_in_expense!27@cost_in_dictionary!19@cost_in_dictionary!27@
+cur|2|current_day!27@current_day!19@
+day|2|day_in_dictionary!27@day_in_dictionary!19@
+del|3|delete_between!34@delete_day!42@delete_expense_type!34@
+do_|2|do_sort_desc!42@do_sort!42@
+fil|2|filter_by_type!50@filter_type_greaterthan!50@
+ins|3|insert_expense!10@insert_into_stack!58@insert_into_dictionary!42@
+mai|1|main_menu!18@
+mak|3|make_filter!50@make_copy!58@make_into_other!26@
+men|5|menu_write!18@menu_add_new_expense!18@menu_obtain_characteristics!18@menu_filter!18@menu_modify!18@
+obt|3|obtain_sum!42@obtain_exact_day!42@obtain_maximum_day!42@
+opt|2|option_undo!58@option_redo!58@
+pos|1|positive_read!26@
+rea|5|read_add_expense!10@read_insert_expense!10@read_appropriate_type!26@read_good_option!26@read_appropriate_day!26@
+red|1|redo!58@
+rem|3|remove_expenses_oftype!34@remove_day!34@remove_days_between!34@
+rep|2|replace_in_dict!34@replace_expenses!34@
+sho|5|show_exact_day!66@show_sorted_asc!66@show_sum_for_type!66@show_sorted_desc_type!66@show_maximum_day!66@
+tak|3|take_lessthan_beforeday!50@take_greaterthan!50@take_expenses_with_type!50@
+tes|1|testfunctions!18@
+typ|4|type_in_dictionary!19@type_in_expense!27@type_in_expense!19@type_in_dictionary!27@
+und|1|undo!58@
+ver|2|verify_type!26@verify_stack!26@
+wri|5|write_dict!42@write_number!42@write_greaterthan!50@write_alltype!50@write_lessthan_beforeday!50@
+-- END TREE
+-- START TREE 2
+0
+-- END TREE

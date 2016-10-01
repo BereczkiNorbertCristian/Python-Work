@@ -1,0 +1,23 @@
+'''
+Created on Nov 11, 2015
+
+@author: Norbi
+'''
+from Repository.repoassign import assignment_repository
+from Repository.repostudassign import StudAssignRepo
+from Repository.repostud import student_repository
+from Ctrl.ctrlstud import StudController
+from Ctrl.ctrlassign import AssignController
+from Ctrl.ctrlstudassign import StudAssignCtrl
+from UI import Console
+
+if __name__ == '__main__':
+    stud_repo=student_repository()
+    assign_repo=assignment_repository()
+    studassign_repo=StudAssignRepo()
+    ctrl_stud=StudController(stud_repo)
+    ctrl_assign=AssignController(assign_repo)
+    ctrl_studassign=StudAssignCtrl(studassign_repo)
+    ui=Console(ctrl_stud,ctrl_assign,ctrl_studassign)
+
+    ui.main_menu()

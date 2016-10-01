@@ -1,0 +1,11 @@
+1;red apples;166;10
+2;green apples;107;10
+3;bread 1lb;111;3
+4;bread 2lb;100;5
+5;soap;50;2
+6;milk;30;4
+7;sugar;25;8
+8;coffee 200ml;10;6
+9;cheese 1lb;10;15
+10;salt 1lb;30;2
+11;sugar;253;3

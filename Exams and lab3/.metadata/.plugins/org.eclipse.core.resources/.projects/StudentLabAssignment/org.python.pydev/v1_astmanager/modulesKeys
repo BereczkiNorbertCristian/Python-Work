@@ -1,0 +1,8 @@
+MODULES_MANAGER_V2
+Controller|C:\works\StudentLabAssignment\Sources\Controller.py
+Domain|C:\works\StudentLabAssignment\Sources\Domain.py
+Repository|C:\works\StudentLabAssignment\Sources\Repository.py
+UserInterface|C:\works\StudentLabAssignment\Sources\UserInterface.py
+appCoordinator|C:\works\StudentLabAssignment\Sources\appCoordinator.py
+asgcontrol|C:\works\StudentLabAssignment\Sources\asgcontrol.py
+validityFuntions|C:\works\StudentLabAssignment\Sources\validityFuntions.py

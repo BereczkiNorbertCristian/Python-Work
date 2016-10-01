@@ -1,0 +1,72 @@
+'''
+Created on Nov 10, 2015
+
+@author: Norbi
+'''
+from Domain.StudAssign import *
+from Domain.DeadlinesD import *
+from Domain.StudentD import *
+from Domain.AssignmentD import *
+
+class StudAssignRepo :
+    
+    def __init__(self):
+        '''
+        constructor for list in repository
+        '''
+        self.__sa_list=[]
+    
+    def __len__(self):
+        '''
+        returns the length of the list
+        '''
+        return len(self.__sa_list)
+    
+    def get_list(self):
+        '''
+        returns the list in repository
+        '''
+        return self.__sa_list
+    
+    def add(self,sa):
+        '''
+        adds in the list an object StudAssign
+        '''
+        self.__sa_list.append(sa)
+    
+    def remove_by_stud(self,stud):
+        '''
+        removes objects in list 
+        '''
+        found=False
+        lst=self.get_list()
+        for st in lst :
+            if st.get_stud() == stud :
+                del st
+                found=True
+        return found
+        
+        
+def RepoTest():
+    slst=StudAssignRepo()
+    s=Students(5,"John",8)
+    d=Deadlines(4,4,4)
+    a=Assignments(5,"5 exercises",9)
+    sa=StudAssign(s,a,d)
+    
+    slst.add(sa)
+    assert len(slst) == 1
+    s=Students(5,"John",8)
+    d=Deadlines(4,4,4)
+    a=Assignments(5,"6 essays",6)
+    sa=StudAssign(s,a,d)
+    slst.add(sa)
+    assert len(slst) == 2
+    assert slst.remove_by_stud(s) == True
+    assert len(slst) == 0
+    
+    
+    
+RepoTest()
+        
+        

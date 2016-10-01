@@ -1,0 +1,17 @@
+INSTUPCtrl.ctrlassign
+C:\works\Lab3\Ctrl\ctrlassign.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&3|6|2|5&&2|7|2|1&&2|8|2|1&&2|9|2|1&&2|10|2|1&&2|11|2|1&&3|4|2|12&&2|13|2|1&&2|14|2|1
+add_assign=7
+AssignController.__init__=5
+__undo=6
+remove_by_id=8
+update=9
+redo=13
+AssignController=1
+get_assign=10
+showassigns=14
+Ctrl.ctrlassign=2
+undo=11
+AssignController.undo=12
+__init__=3
+__repo=4

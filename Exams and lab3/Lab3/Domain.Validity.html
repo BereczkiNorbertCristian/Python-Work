@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Domain.Validity</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="Domain.html"><font color="#ffffff">Domain</font></a>.Validity</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:c%3A%5Cworks%5Clab3%5Cdomain%5Cvalidity.py">c:\works\lab3\domain\validity.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Nov&nbsp;11,&nbsp;2015<br>
+&nbsp;<br>
+@author:&nbsp;Norbi</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#Exception">builtins.Exception</a>(<a href="builtins.html#BaseException">builtins.BaseException</a>)
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Domain.Validity.html#ObjectException">ObjectException</a>
+</font></dt></dl>
+</dd>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Domain.Validity.html#Validator">Validator</a>
+</font></dt><dt><font face="helvetica, arial"><a href="Domain.Validity.html#studValidator">studValidator</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="ObjectException">class <strong>ObjectException</strong></a>(<a href="builtins.html#Exception">builtins.Exception</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Common&nbsp;base&nbsp;class&nbsp;for&nbsp;all&nbsp;non-exit&nbsp;exceptions.<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%"><dl><dt>Method resolution order:</dt>
+<dd><a href="Domain.Validity.html#ObjectException">ObjectException</a></dd>
+<dd><a href="builtins.html#Exception">builtins.Exception</a></dd>
+<dd><a href="builtins.html#BaseException">builtins.BaseException</a></dd>
+<dd><a href="builtins.html#object">builtins.object</a></dd>
+</dl>
+<hr>
+Methods defined here:<br>
+<dl><dt><a name="ObjectException-__init__"><strong>__init__</strong></a>(self, msg)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="ObjectException-__str__"><strong>__str__</strong></a>(self)</dt><dd><tt>Return&nbsp;str(self).</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<hr>
+Methods inherited from <a href="builtins.html#Exception">builtins.Exception</a>:<br>
+<dl><dt><a name="ObjectException-__new__"><strong>__new__</strong></a>(*args, **kwargs)<font color="#909090"><font face="helvetica, arial"> from <a href="builtins.html#type">builtins.type</a></font></font></dt><dd><tt>Create&nbsp;and&nbsp;return&nbsp;a&nbsp;new&nbsp;<a href="builtins.html#object">object</a>.&nbsp;&nbsp;See&nbsp;help(type)&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Methods inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><a name="ObjectException-__delattr__"><strong>__delattr__</strong></a>(self, name, /)</dt><dd><tt>Implement&nbsp;delattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="ObjectException-__getattribute__"><strong>__getattribute__</strong></a>(self, name, /)</dt><dd><tt>Return&nbsp;getattr(self,&nbsp;name).</tt></dd></dl>
+
+<dl><dt><a name="ObjectException-__reduce__"><strong>__reduce__</strong></a>(...)</dt><dd><tt>helper&nbsp;for&nbsp;pickle</tt></dd></dl>
+
+<dl><dt><a name="ObjectException-__repr__"><strong>__repr__</strong></a>(self, /)</dt><dd><tt>Return&nbsp;repr(self).</tt></dd></dl>
+
+<dl><dt><a name="ObjectException-__setattr__"><strong>__setattr__</strong></a>(self, name, value, /)</dt><dd><tt>Implement&nbsp;setattr(self,&nbsp;name,&nbsp;value).</tt></dd></dl>
+
+<dl><dt><a name="ObjectException-__setstate__"><strong>__setstate__</strong></a>(...)</dt></dl>
+
+<dl><dt><a name="ObjectException-with_traceback"><strong>with_traceback</strong></a>(...)</dt><dd><tt><a href="builtins.html#Exception">Exception</a>.<a href="#ObjectException-with_traceback">with_traceback</a>(tb)&nbsp;--<br>
+set&nbsp;self.<strong>__traceback__</strong>&nbsp;to&nbsp;tb&nbsp;and&nbsp;return&nbsp;self.</tt></dd></dl>
+
+<hr>
+Data descriptors inherited from <a href="builtins.html#BaseException">builtins.BaseException</a>:<br>
+<dl><dt><strong>__cause__</strong></dt>
+<dd><tt>exception&nbsp;cause</tt></dd>
+</dl>
+<dl><dt><strong>__context__</strong></dt>
+<dd><tt>exception&nbsp;context</tt></dd>
+</dl>
+<dl><dt><strong>__dict__</strong></dt>
+</dl>
+<dl><dt><strong>__suppress_context__</strong></dt>
+</dl>
+<dl><dt><strong>__traceback__</strong></dt>
+</dl>
+<dl><dt><strong>args</strong></dt>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Validator">class <strong>Validator</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Static methods defined here:<br>
+<dl><dt><a name="Validator-averifyid"><strong>averifyid</strong></a>(verifassign, assignrepo)</dt><dd><tt>Verifies&nbsp;if&nbsp;id&nbsp;is&nbsp;in&nbsp;list&nbsp;of&nbsp;assignments<br>
+Input:&nbsp;student&nbsp;with&nbsp;the&nbsp;id&nbsp;which&nbsp;will&nbsp;be&nbsp;verified,&nbsp;repository&nbsp;of&nbsp;assginments<br>
+Output:0&nbsp;if&nbsp;found<br>
+1&nbsp;if&nbsp;not&nbsp;found</tt></dd></dl>
+
+<dl><dt><a name="Validator-read_day"><strong>read_day</strong></a>(message)</dt><dd><tt>Args:message-string<br>
+Reads&nbsp;day&nbsp;between&nbsp;1-31</tt></dd></dl>
+
+<dl><dt><a name="Validator-read_good_option"><strong>read_good_option</strong></a>(op_list)</dt><dd><tt>Reads&nbsp;an&nbsp;option&nbsp;between&nbsp;list&nbsp;op_list<br>
+if&nbsp;enter&nbsp;is&nbsp;pressed&nbsp;too&nbsp;early&nbsp;then&nbsp;message<br>
+Returns:option-int&nbsp;between&nbsp;op_list</tt></dd></dl>
+
+<dl><dt><a name="Validator-read_grade"><strong>read_grade</strong></a>(grade_list)</dt></dl>
+
+<dl><dt><a name="Validator-read_month"><strong>read_month</strong></a>(message)</dt><dd><tt>Args:message-string<br>
+Reads&nbsp;a&nbsp;month&nbsp;between&nbsp;1-12<br>
+Returns:month-int&nbsp;between&nbsp;1-&gt;12</tt></dd></dl>
+
+<dl><dt><a name="Validator-read_positive_integer"><strong>read_positive_integer</strong></a>(message)</dt><dd><tt>Reads&nbsp;a&nbsp;positive&nbsp;integer<br>
+input:message<br>
+output:n&nbsp;as&nbsp;integer&nbsp;no</tt></dd></dl>
+
+<dl><dt><a name="Validator-read_year"><strong>read_year</strong></a>(message)</dt><dd><tt>Args:message-string&nbsp;to&nbsp;be&nbsp;shown&nbsp;to&nbsp;user<br>
+reads&nbsp;a&nbsp;year<br>
+Returns:positive&nbsp;integer</tt></dd></dl>
+
+<dl><dt><a name="Validator-simple_read"><strong>simple_read</strong></a>(message)</dt><dd><tt>Args:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;message:string<br>
+&nbsp;<br>
+Returns:n-anything&nbsp;that&nbsp;was&nbsp;read&nbsp;from&nbsp;user&nbsp;(string)</tt></dd></dl>
+
+<dl><dt><a name="Validator-sverifyid"><strong>sverifyid</strong></a>(verifstud, studrepo)</dt><dd><tt>Verifies&nbsp;if&nbsp;id&nbsp;of&nbsp;student&nbsp;is&nbsp;in&nbsp;the&nbsp;list&nbsp;of&nbsp;students<br>
+Input:student&nbsp;and&nbsp;repository&nbsp;of&nbsp;students<br>
+Output:0&nbsp;if&nbsp;founnd<br>
+1&nbsp;if&nbsp;not&nbsp;found</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="studValidator">class <strong>studValidator</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr><td bgcolor="#ffc8d8"><tt>&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%">Static methods defined here:<br>
+<dl><dt><a name="studValidator-validStud"><strong>validStud</strong></a>(stud)</dt><dd><tt>verifies&nbsp;if&nbsp;the&nbsp;atributes&nbsp;of&nbsp;stud&nbsp;are&nbsp;corectly&nbsp;introduced&nbsp;by&nbsp;certain&nbsp;rules<br>
+Args:stud:<a href="builtins.html#object">object</a>&nbsp;type&nbsp;Student<br>
+Returns:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="builtins.html#object">object</a>:</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-teststudValidator"><strong>teststudValidator</strong></a>()</dt></dl>
+ <dl><dt><a name="-veriftest"><strong>veriftest</strong></a>()</dt></dl>
+</td></tr></table>
+</body></html>

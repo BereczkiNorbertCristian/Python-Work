@@ -1,0 +1,250 @@
+'''
+Created on Nov 11, 2015
+
+@author: Norbi
+'''
+
+from Domain.domstud import *
+from Domain.domassign import *
+from Domain.domdeadline import *
+from Domain.domstudassign import *
+from Domain.Validity import *
+from Repository.repoassign import *
+from Repository.repostud import *
+from Repository.repostudassign import *
+from Ctrl.ctrlassign import *
+from Ctrl.ctrlstud import *
+from Ctrl.ctrlstudassign import *
+from copy import deepcopy
+
+class Console:
+    
+    def __init__(self,stud_controller,assign_controller,studassign_controller):
+        
+        self.__ctrl_stud = stud_controller
+        self.__ctrl_assign = assign_controller
+        self.__ctrl_studassign=studassign_controller
+        
+    @staticmethod
+    def read_student():
+    
+        studid=Validator.read_positive_integer("Introduce student's ID:")
+        name=Validator.simple_read("Introduce student's name:")
+        group=Validator.read_positive_integer("Introduce student's group:")
+        
+        return Students(studid,name,group)
+    
+    
+    def add_student(self):
+        """
+        adds student and if the student's id is already in the list then it enters except branch
+        """
+        
+        stud=Console.read_student()
+        try:
+            self.__ctrl_stud.add_stud(stud)
+        except ObjectException as e :
+            print(e)
+    
+    def remove_stud_by_id(self):
+        """
+        tries to remove a student with an id (which is firstly read from the user)
+        """
+        studid=Validator.read_positive_integer("Please insert the id of the student you want ot be removed:")
+        st=self.__ctrl_stud.get_by_id(studid)
+        x=self.__ctrl_studassign.remove_by_stud(st)
+        if x == False :
+            print("We cannot remove anything because the id doesn't exist!")
+        else :
+            self.__ctrl_stud.remove_by_id(studid)
+        
+    def update_stud(self):
+        """
+        uses read functions to read how the student will be updated and updates the student with the given id
+        """
+        studid=Validator.read_positive_integer("Introduce student's ID which will be updated:")
+        name=Validator.simple_read("Introduce student's name:")
+        group=Validator.read_positive_integer("Introduce student's group:")
+        
+        self.__ctrl_stud.update(studid,name,group)
+    
+    def fetch_stud(self):
+        
+        studid = Validator.read_positive_integer("Student's id who will be fetched:")
+        student=self.__ctrl_stud.get_by_id(studid)
+        if not student :
+            print("Student's id not found!")
+        else :
+            print(str(student))
+    
+    def undo_student(self):
+        
+        self.__ctrl_stud.undo()
+    @staticmethod
+    def read_assignment():
+        """
+        uses read functions to read from the user assignment elements
+        returns Assignments object newly created
+        """
+        studid = Validator.read_positive_integer("Introduce student's id for the assignment:")
+        description = Validator.simple_read("Introduce a description:")
+        
+        print("Grade:")
+        grade=Validator.read_grade([1,2,3,4,5,6,7,8,9])
+        
+        return Assignments(studid,description,grade)
+    @staticmethod
+    def read_deadline():
+        '''
+        reads a readline
+        '''
+        day=Validator.read_day("Introduce day for deadline:")
+        month=Validator.read_month("Introduce month for deadline:")
+        year=Validator.read_year("Introduce year for deadline:")
+        
+        d=Deadlines(day,month,year)
+        return d
+    
+    def add_assign(self):
+        """
+        tries to add an assginment to the repository and if it's id already exists then it goes on the except branch
+        """
+        assign=Console.read_assignment()
+        d=Console.read_deadline()
+        st=self.__ctrl_stud.get_by_id(assign.get_id())
+        if  not st  :
+            print("Cannot give the assignment to any student because the assignment's studentId does not exist yet!")
+            
+        else :
+            self.__ctrl_assign.add_assign(assign)
+            sa=StudAssign(st,assign,d)
+            self.__ctrl_studassign.add(sa)
+        
+        
+    def remove_assign_by_id(self):
+        """
+        removes assignment by id and reads the studid
+        """
+
+        studid=Validator.read_positive_integer("Id to be removed")
+        asg=self.__ctrl_assign.get_assign(studid)
+        x=self.__ctrl_studassign.remove_by_assign(asg)
+        if x == False :
+            print("There is no assignment to be removed!")
+        else :
+            self.__ctrl_assign.remove_by_id(studid)
+    
+    def update_assign(self):
+        """
+        reads the elements to be put in the assignment and then introduces them there
+        """
+        studid = Validator.read_positive_integer("Introduce student's id for the assignment to be updated:")
+        description = Validator.simple_read("Introduce a description:")
+        #day=Validator.read_day("Introduce day for deadline:")
+        #month=Validator.read_month("Introduce month for deadline:")
+        #year=Validator.read_year("Introduce year for deadline:")
+        
+        #d=Deadlines(day,month,year)
+        
+        grade=Validator.read_good_option([1,2,3,4,5,6,7,8,9])
+        
+        self.__ctrl_assign.update(studid,description,grade)
+        
+    def fetch_assign(self):
+        '''
+        Searches for an assignment
+        if found shows the object student
+        if not appropriate message
+        '''
+        studid=Validator.read_positive_integer("Introduce student's id to be fetched")
+        assign=self.__ctrl_assign.get_assign(studid)
+        if assign == False :
+            print("Assignment's student id not found!")
+        else :
+            print(str(assign))
+        
+    def undo_assign(self):
+        
+        self.__ctrl_assign.undo()
+    
+    def show_students(self):
+        
+        self.__ctrl_stud.showstuds()
+    
+    def show_assignments(self):
+        
+        self.__ctrl_assign.showassigns()
+    def show_stud_assign(self):
+        
+        self.__ctrl_studassign.show_stud_assign()
+    @staticmethod
+    def print_menu():
+        str="""
+        1---Add student
+        2---Add assignment
+        3---Remove student by id
+        4---Remove assignment by id
+        5---Update student by id
+        6---Update assignment by id
+        7---Fetch student by id
+        8---Fetch assignment by id
+        9---Undo
+        10---Show students
+        11---Show Assignments
+        12---Show StudAssign
+        0---Exit
+        """
+        print(str)
+        
+    def main_menu(self):
+        option=-1
+        bef_opt=-1
+        while not option == 0 :
+            Console.print_menu()
+            option=Validator.read_good_option([0,1,2,3,4,5,6,7,8,9,10,11,12])
+            
+            if option == 1:
+                self.add_student()
+            elif option == 2:
+                self.add_assign()
+            elif option == 3:
+                self.remove_stud_by_id()
+            elif option == 4 :
+                self.remove_assign_by_id()
+            elif option == 5 :
+                self.update_stud()
+            elif option == 6 :
+                self.update_assign()
+            elif option == 7 :
+                self.fetch_stud()
+            elif option == 8:
+                self.fetch_assign()
+            elif option == 9 :
+                if bef_opt > 0 and bef_opt <7 :
+                    if bef_opt % 2 == 0 :
+                        self.undo_assign()
+                        self.__ctrl_studassign.undo()
+                    else :
+                        self.undo_student()
+                        self.__ctrl_studassign.undo()
+            elif option == 10 :
+                Console.show_students(self)
+            elif option == 11 :
+                Console.show_assignments(self)
+            elif option == 12 :
+                Console.show_stud_assign(self)
+            bef_opt=option
+        print("You have exited!")
+
+stud_repo=student_repository()
+assign_repo=assignment_repository()
+studassign_repo=StudAssignRepo()
+ctrl_stud=StudController(stud_repo)
+ctrl_assign=AssignController(assign_repo)
+ctrl_studassign=StudAssignCtrl(studassign_repo)
+ui=Console(ctrl_stud,ctrl_assign,ctrl_studassign)
+
+ui.main_menu()
+        
+        
+        

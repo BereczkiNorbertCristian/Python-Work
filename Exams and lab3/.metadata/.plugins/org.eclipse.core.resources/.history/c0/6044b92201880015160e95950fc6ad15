@@ -1,0 +1,93 @@
+'''
+Created on Nov 11, 2015
+
+@author: Norbi
+'''
+class Students:
+    '''
+    Student object contains 3 fields
+    +__name
+    +__id
+    +__group
+    Methods:
+    ---Getters
+    ---Setters
+    ---equal
+    ---make into string
+    '''
+    def __init__(self,id_student,name,group):
+        '''
+        contructor
+        '''
+        self.__id=id_student
+        self.__name=name
+        self.__group=group
+    
+    def __eq__(self,other):
+        '''
+        verifies if another object is the same as self by the following criteria
+        '''
+        
+        return self.get_id() == other.get_id()
+    
+    def get_id(self):
+        '''
+        getter for id
+        '''
+        return self.__id
+    
+    def get_name(self):
+        '''
+        getter for name
+        '''
+        return self.__name
+    
+    def get_group(self):
+        '''
+        getter for group
+        '''
+        return self.__group
+    
+    def set_id(self,id_student):
+        '''
+        setter for id
+        '''
+        self.__id=id_student
+        
+    def set_name(self,name):
+        """
+        setter for name
+        """
+        self.__name=name
+        
+    def set_group(self,group):
+        '''
+        setter for group
+        '''
+        self.__group=group
+    
+    def __str__(self):
+        '''
+        returns the content of the object as a string
+        '''
+        my_string=""
+        my_string="Name:" + str(self.get_name()) 
+        my_string+= " " + "ID:" + str(self.get_id()) 
+        my_string+= " " + "Group:" + str(self.get_group())
+        return my_string    
+        
+        
+        
+def tests():
+    m=Students(3,"peter",4)
+    assert m.get_id() == 3
+    assert m.get_group() == 4
+    assert m.get_name() == "peter"
+    m.set_id(6)
+    assert m.get_id() == 6
+    m.set_name("Clara")
+    assert m.get_name() == "Clara"
+    
+tests()
+
+        

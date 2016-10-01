@@ -1,0 +1,46 @@
+'''
+Created on Nov 8, 2015
+
+@author: Norbi
+'''
+
+from Domain.StudentD import *
+from Domain.AssignmentD import *
+
+class StudAssign:
+    
+    def __init__(self,stud,assign,deadline):
+        self.__stud=stud
+        self.__assign=assign
+        self.__deadline=deadline
+        
+    def get_stud(self):
+        
+        return self.__stud
+    
+    def get_assign(self):
+        
+        return self.__assign
+    
+    def get_deadline(self):
+        
+        return self.__deadline
+    
+    def __eq__(self,other):
+        
+        return type(self) == type (other) and self.__stud==other.__stud and self.__assign==other.__assign and self.__deadline == other.__deadline 
+    
+
+def test_StudAssign():
+    
+    stud=Students(3,"John",3)
+    d=Deadlines(1,1,1)
+    assign=(3,"9 ex",d,8)
+    d=Deadlines(4,4,4)
+    sa=StudAssign(stud,assign,d)
+    assert sa.get_stud() == stud
+    assert sa.get_assign() == assign
+    assert sa.get_deadline() == d
+    
+    
+test_StudAssign()
